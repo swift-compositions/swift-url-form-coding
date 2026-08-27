@@ -1,7 +1,7 @@
 # .github/metadata.yaml
 description: "application/x-www-form-urlencoded encoding and decoding with Codable support for Swift."
 topics:
-  - foundations
+  - compositions
   - form-coding
   - url-encoding
 homepage: "https://swift-institute.org"

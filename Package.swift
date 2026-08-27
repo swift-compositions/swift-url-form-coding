@@ -34,7 +34,7 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            url: "https://github.com/swift-foundations/swift-html-form-coder.git",
+            url: "https://github.com/swift-compositions/swift-html-form-coder.git",
             branch: "main"
         ),
         .package(url: "https://github.com/swift-standards/swift-html-standard.git", branch: "main"),

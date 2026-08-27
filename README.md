@@ -1,6 +1,6 @@
 # swift-url-form-coding
 
-[![CI](https://github.com/coenttb/swift-url-form-coding/workflows/CI/badge.svg)](https://github.com/coenttb/swift-url-form-coding/actions/workflows/ci.yml)
+[![CI](https://github.com/swift-compositions/swift-url-form-coding/workflows/CI/badge.svg)](https://github.com/swift-compositions/swift-url-form-coding/actions/workflows/ci.yml)
 ![Development Status](https://img.shields.io/badge/status-active--development-blue.svg)
 
 A Swift package for encoding and decoding `application/x-www-form-urlencoded` data with Codable support.
@@ -23,7 +23,7 @@ Add this package to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/coenttb/swift-url-form-coding", from: "0.1.0")
+    .package(url: "https://github.com/swift-compositions/swift-url-form-coding", from: "0.1.0")
 ]
 ```
 
@@ -106,8 +106,8 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ## Related Packages
 
-- [swift-multipart-form-coding](https://github.com/coenttb/swift-multipart-form-coding) - Multipart form data encoding with file uploads
-- [swift-form-coding](https://github.com/coenttb/swift-form-coding) - Umbrella package that re-exports both
+- [swift-multipart-form-coding](https://github.com/swift-compositions/swift-multipart-form-coding) - Multipart form data encoding with file uploads
+- [swift-form-coding](https://github.com/swift-compositions/swift-form-coding) - Umbrella package that re-exports both
 
 ## Credits
 
