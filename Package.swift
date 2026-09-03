@@ -2,25 +2,6 @@
 
 import PackageDescription
 
-extension String {
-    static let urlFormCoding: Self = "URLFormCoding"
-}
-
-extension String { var tests: Self { self + " Tests" } }
-
-extension Target.Dependency {
-    static var urlFormCoding: Self { .target(name: .urlFormCoding) }
-    static var htmlFormCoder: Self {
-        .product(name: "HTML Form Coder", package: "swift-html-form-coder")
-    }
-    static var htmlFormCoderCodable: Self {
-        .product(name: "HTML Form Coder Codable", package: "swift-html-form-coder")
-    }
-    static var htmlStandard: Self {
-        .product(name: "HTML Standard", package: "swift-html-standard")
-    }
-}
-
 let package = Package(
     name: "swift-url-form-coding",
     platforms: [
@@ -30,7 +11,7 @@ let package = Package(
         .watchOS("27"),
     ],
     products: [
-        .library(name: .urlFormCoding, targets: [.urlFormCoding])
+        .library(name: "URLFormCoding", targets: ["URLFormCoding"])
     ],
     dependencies: [
         .package(
@@ -41,18 +22,18 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: .urlFormCoding,
+            name: "URLFormCoding",
             dependencies: [
-                .htmlFormCoder,
-                .htmlFormCoderCodable,
-                .htmlStandard,
+                .product(name: "HTML Form Coder", package: "swift-html-form-coder"),
+                .product(name: "HTML Form Coder Codable", package: "swift-html-form-coder"),
+                .product(name: "HTML Standard", package: "swift-html-standard"),
             ]
         ),
         .testTarget(
-            name: .urlFormCoding.tests,
+            name: "URLFormCoding Tests",
             dependencies: [
-                .urlFormCoding,
-                .htmlStandard,
+                .target(name: "URLFormCoding"),
+                .product(name: "HTML Standard", package: "swift-html-standard"),
             ]
         ),
     ]
